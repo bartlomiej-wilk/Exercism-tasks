@@ -74,12 +74,38 @@
  
 
 // Task 1
+function frontDoorResponse(line) {
+  return line[0];
+}
 
+console.log(frontDoorResponse('Stands so high'));
 
 // Task 2
+function frontDoorPassword(word) {
+  let wordToLowerCase = word.toLowerCase();
+  let firstLetter = wordToLowerCase.slice(0, 1).toUpperCase();
+  let otherLetters = wordToLowerCase.slice(1);
+  return firstLetter + otherLetters;
+}
 
+console.log(frontDoorPassword('SHIRE'));
+console.log(frontDoorPassword('shire'));
 
 // Task 3
+function backDoorResponse(line) {
+  let noWhitespaceAtTheEndLine = line.trimEnd();
+  return noWhitespaceAtTheEndLine.slice(-1);
+}
 
+console.log(backDoorResponse('Stands so high'));
+console.log(backDoorResponse('Stands so high   '));
 
 // Task 4  
+function backDoorPassword(word) {
+  let wordToLowerCase = word.toLowerCase();
+  let firstLetter = wordToLowerCase.slice(0, 1).toUpperCase();
+  let otherLetters = wordToLowerCase.slice(1);
+  let wordWithFirstUpperCase = firstLetter + otherLetters;
+  return wordWithFirstUpperCase.concat(', please');
+}
+console.log(backDoorPassword('horse'));
