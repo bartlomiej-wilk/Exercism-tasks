@@ -70,24 +70,70 @@
  
 
 // Task 1
+function getItem(cards, position) {
+  return cards[position];
+}
+
+console.log(getItem([1, 2, 4, 1], 2));
 
 
 // Task 2
+function setItem(cards, position, replacementCard) {
+  cards.splice(position, 1, replacementCard)
+  return cards;
+}
+
+console.log(setItem([1, 2, 4, 1], 2, 6));
 
 
 // Task 3
+function insertItemAtTop(cards, newCard) {
+  cards.push(newCard);
+  return cards;
+}
+
+console.log(insertItemAtTop([5, 9, 7, 1], 8));
 
 
 // Task 4  
+function removeItem(cards, position) {
+  cards.splice(position, 1);
+  return cards;
+}
+
+console.log(removeItem([3, 2, 6, 4, 8], 2));
 
 
 // Task 5
+function removeItemFromTop(cards) {
+  cards.pop();
+  return cards;
+}
+
+console.log(removeItemFromTop([3, 2, 6, 4, 8]));
 
 
 // Task 6
+function insertItemAtBottom(cards, newCard) {
+  cards.unshift(newCard);
+  return cards;
+}
+
+console.log(insertItemAtBottom([5, 9, 7, 1], 8));
 
 
 // Task 7
+function removeItemAtBottom(cards) {
+  cards.shift();
+  return cards;
+}
+
+console.log(removeItemAtBottom([8, 5, 9, 7, 1]));
 
 
-// Task 8  
+// Task 8
+function checkSizeOfStack(cards, stackSize) {
+  return cards.length == stackSize;
+}
+
+console.log(checkSizeOfStack([3, 2, 6, 4, 8], 4));
