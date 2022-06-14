@@ -52,12 +52,32 @@
  
 
 // Task 1
+function canExecuteFastAttack(knightIsAwake) {
+  return !knightIsAwake;
+}
+
+console.log(canExecuteFastAttack(false));
 
 
 // Task 2
+function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
+  return knightIsAwake || archerIsAwake || prisonerIsAwake;
+}
+
+console.log(canSpy(false, true, false));
 
 
 // Task 3
+function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
+  return !archerIsAwake && prisonerIsAwake;
+}
+
+console.log(canSignalPrisoner(false, true));
 
 
 // Task 4  
+function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent) {
+  return (petDogIsPresent && !archerIsAwake) || (!petDogIsPresent && !knightIsAwake && !archerIsAwake && prisonerIsAwake);
+}
+
+console.log(canFreePrisoner(false, false, true, false));
