@@ -50,7 +50,6 @@
   // => false
 */
  
-
 // Task 1
 function canExecuteFastAttack(knightIsAwake) {
   return !knightIsAwake;
@@ -80,4 +79,4 @@ function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIs
   return (petDogIsPresent && !archerIsAwake) || (!petDogIsPresent && !knightIsAwake && !archerIsAwake && prisonerIsAwake);
 }
 
-console.log(canFreePrisoner(false, false, true, false));
+console.log(canFreePrisoner(false, true, false, false));
