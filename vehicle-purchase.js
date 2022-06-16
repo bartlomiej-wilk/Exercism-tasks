@@ -57,6 +57,7 @@
 
   console.log(needsLicense('car'));
 
+  
   // Task 2
   function chooseVehicle(option1, option2) {
     if(option1 < option2) {
